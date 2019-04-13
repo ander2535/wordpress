@@ -4,7 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-public class ConfigReader {
+public class ConfigReader
+{
 
     Properties prop;
 
@@ -17,12 +18,14 @@ public class ConfigReader {
             File src = new File("./properties/config.properties");
             FileInputStream fis = new FileInputStream(src);
 
-            prop = new Properties();
+            prop = new Properties( );
             prop.load(fis);
 
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
 
-            e.printStackTrace();
+            e.printStackTrace( );
 
         }
 
@@ -32,7 +35,8 @@ public class ConfigReader {
      *
      * @depreciated Managed with WebDriverManager
      */
-    @Deprecated public String getChromePath()
+    @Deprecated
+    public String getChromePath()
     {
 
         String path = prop.getProperty("chrome.driver");
@@ -45,7 +49,8 @@ public class ConfigReader {
      *
      * @depreciated Managed with WebDriverManager
      */
-    @Deprecated public String getGeckoPath()
+    @Deprecated
+    public String getGeckoPath()
     {
 
         String path = prop.getProperty("gecko.driver");

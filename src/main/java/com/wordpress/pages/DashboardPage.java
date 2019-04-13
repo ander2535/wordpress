@@ -8,11 +8,13 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class DashboardPage {
+public class DashboardPage
+{
 
     WebDriver driver;
 
-    public DashboardPage(WebDriver ldriver) {
+    public DashboardPage(WebDriver ldriver)
+    {
 
         this.driver = ldriver;
 

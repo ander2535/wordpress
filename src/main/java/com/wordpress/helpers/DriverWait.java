@@ -9,13 +9,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class DriverWait {
+public class DriverWait
+{
 
 
-    public static boolean untilVisible(WebDriver drv, By by, int seconds) {
+    public static boolean untilVisible(WebDriver drv, By by, int seconds)
+    {
 
         // If null/empty default to 20 seconds.
-        if(seconds == 0){
+        if (seconds == 0)
+        {
             seconds = 20;
         }
 
@@ -23,7 +26,7 @@ public class DriverWait {
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("gh-ac-box2")));
         wait.ignoring(NoSuchElementException.class);
 
-        return element.isDisplayed();
+        return element.isDisplayed( );
 
     }
 
@@ -31,7 +34,7 @@ public class DriverWait {
     {
 
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.visibilityOfAllElements());
+        wait.until(ExpectedConditions.visibilityOfAllElements( ));
 
     }
 
@@ -42,7 +45,7 @@ public class DriverWait {
         {
             Thread.sleep(ms);
         }
-        catch(Exception x)
+        catch (Exception x)
         {
             System.out.println("Sleep time out error caught.");
         }
@@ -60,8 +63,10 @@ public class DriverWait {
                 .ignoring(StaleElementReferenceException.class)
                 .ignoring(NoSuchElementException.class);
 
-        WebElement element = wait.until(new Function<WebDriver, WebElement>() {
-            public WebElement apply(WebDriver driver) {
+        WebElement element = wait.until(new Function<WebDriver, WebElement>( )
+        {
+            public WebElement apply(WebDriver driver)
+            {
                 return driver.findElement(By.id(id));
             }
         });

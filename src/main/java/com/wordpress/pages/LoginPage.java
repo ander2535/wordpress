@@ -1,7 +1,5 @@
 package com.wordpress.pages;
 
-import com.wordpress.helpers.DriverWait;
-import com.wordpress.helpers.Mouse;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
@@ -12,7 +10,8 @@ public class LoginPage
 
     WebDriver driver;
 
-    public LoginPage(WebDriver ldriver){
+    public LoginPage(WebDriver ldriver)
+    {
 
         this.driver = ldriver;
 

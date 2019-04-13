@@ -8,7 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class BrowserFactory {
+public class BrowserFactory
+{
 
     static WebDriver driver;
     static ConfigReader config;
@@ -16,29 +17,29 @@ public class BrowserFactory {
     public static WebDriver startBrowser(String broswerName, String url)
     {
 
-        config = new ConfigReader();
+        config = new ConfigReader( );
 
-        if(broswerName.equalsIgnoreCase("chrome"))
+        if (broswerName.equalsIgnoreCase("chrome"))
         {
 
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-            driver.manage().window().fullscreen();
+            WebDriverManager.chromedriver( ).setup( );
+            driver = new ChromeDriver( );
+            driver.manage( ).window( ).fullscreen( );
 
         }
-        else if(broswerName.equalsIgnoreCase("firefox"))
+        else if (broswerName.equalsIgnoreCase("firefox"))
         {
 
-            WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
-            driver.manage().window().fullscreen();
+            WebDriverManager.firefoxdriver( ).setup( );
+            driver = new FirefoxDriver( );
+            driver.manage( ).window( ).fullscreen( );
 
         }
-        else if(broswerName.equalsIgnoreCase("edge"))
+        else if (broswerName.equalsIgnoreCase("edge"))
         {
 
-            WebDriverManager.edgedriver().setup();
-            driver = new EdgeDriver();
+            WebDriverManager.edgedriver( ).setup( );
+            driver = new EdgeDriver( );
 
         }
 
