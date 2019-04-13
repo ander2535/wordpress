@@ -28,4 +28,5 @@ allure-results/
 # Screenshot files
 screenshots/
 
+# Intellij
 .idea/
